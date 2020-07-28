@@ -1,4 +1,4 @@
-# DSP-2020
+# DPS-2020
 Repositorio de Entregas de actividades y evaluaciones de Diseño y programacion de SoftWare Multiplataforma
 
 ## Datos Generales
