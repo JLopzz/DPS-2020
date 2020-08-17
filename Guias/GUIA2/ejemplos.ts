@@ -9,3 +9,7 @@ var developer:boolean = true
 //Arreglos
 var skills:Array<string> = ['JavaScript','TypeScript','Angular','PHP']
 var arrNumeros:number[] = [123,234,345,456]
+
+//Enum
+enum ROLE{Employee, Manager, Admin, Developer}
+var role:ROLE = ROLE.Employee
