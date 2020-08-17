@@ -38,3 +38,16 @@ function setNameEx4(name:string):string{
   return "Hola"+name
 }
 console.log("Hola"+varExterna)
+
+//Objetos
+class Persona{
+  firstName:string
+  lastName:string
+  constructor(_firstName?:string,_lastName?:string){
+    this.firstName = _firstName
+    this.lastName = _lastName
+  }
+}
+var perUno = new Persona()
+var perDos = new Persona("Gabriela")
+var perTre = new Persona("Arely","Acosta")
