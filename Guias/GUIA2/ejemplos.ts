@@ -63,3 +63,14 @@ function getSaludo():string{
   desde la Consola
   ${emoji}`
 }
+
+//Interfaces
+interface myPersona{
+  firstName:string
+  lastName:string
+  twitterAcount?:string
+}
+let perCua:myPersona={
+  firstName:'Andrea',
+  lastName:'Salazar'
+}
