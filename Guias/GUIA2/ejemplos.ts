@@ -51,3 +51,15 @@ class Persona{
 var perUno = new Persona()
 var perDos = new Persona("Gabriela")
 var perTre = new Persona("Arely","Acosta")
+
+//Interpolacion
+var a : string = 'Uriel'
+var b:string = `Saludos ${this.a}`
+
+function getSaludo():string{ 
+  let emoji = '(⌐■_■)'
+  return `Saludos
+  ${this.a}, le enviamos saludos
+  desde la Consola
+  ${emoji}`
+}
