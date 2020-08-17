@@ -74,3 +74,24 @@ let perCua:myPersona={
   firstName:'Andrea',
   lastName:'Salazar'
 }
+
+//Shapes
+class Person{
+  firstName:string
+  lastName:string
+  twitterAcount:string
+
+  constructor(){
+    this.firstName = 'Jorge'
+    this.lastName = "Sosa"
+    this.twitterAcount = "@SosaJorge"
+  }
+
+  setLastName(last:string){
+    this.lastName = last
+  }
+}
+
+var person = new Person()
+person.setLastName('Aguilar')
+console.log(person)
