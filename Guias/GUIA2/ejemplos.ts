@@ -95,3 +95,22 @@ class Person{
 var person = new Person()
 person.setLastName('Aguilar')
 console.log(person)
+
+//Decorators
+class Greet{
+  greeting:string
+  constructor(message:string){
+    this.greeting = message
+  }
+  @enumerable(false)
+  greet(){
+    return "hey, "+ this.greeting
+  }
+}
+function enumerable(value:boolean){
+  return function(target:any,propertyKey:string,descriptor:PropertyDescriptor){
+    descriptor.enumerable = value
+  }
+}
+let gree = new Greet("Soy el mensaje")
+console.log(gree.greet())
