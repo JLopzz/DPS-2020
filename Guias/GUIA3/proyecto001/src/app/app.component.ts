@@ -18,9 +18,12 @@ export class AppComponent {
   }
   ultimos3Suelos(){
     let suma = 0
-    for (let i = 0; i < this.sueldos.length; i++) {
-      suma += this.sueldos[i]
-    }
+    // for (let i = 0; i < this.sueldos.length; i++) {
+    //   suma += this.sueldos[i]
+    // }
+    this.sueldos.forEach(el => {
+      suma += el
+    });
     return suma
   }
 }
