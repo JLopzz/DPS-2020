@@ -1,0 +1,32 @@
+<div [hidden]="enviar">
+  <h2>Formulario Cliente</h2>
+  <form #clienteform="ngForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" class="form-control"required [(ngModel)]="cliente.nombre" #name="ngModel">
+      <div [hidden]="name.valid || name.pristine">Nombre es requerido</div>
+    </div>
+    <div class="form-group">
+      <label for="edad">Edad</label>
+      <input type="text" name="edad" id="edad" class="form-control" [(ngModel)]="cliente.edad">
+    </div>
+    <div class="form-group">
+      <label for="nacionalidades">Nacionalidad</label>
+      <select name="nacionalidades" id="nacionalidades" class="form-control" required [(ngModel)]="cliente.nacionalidad" #Nacionalidad="ngModel">
+        <option *ngFor="let nac of nacionalidad" [value]="nac">{{nac}}</option>
+      </select>
+      <div [hidden]="Nacionalidad.valid || Nacionalidad.pristine">Nacionalidad es requerida</div>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!clienteform.form.valid" >Enviar</button>
+  </form>
+</div>
+<div [hidden]="!enviar">
+  <h2>Enviar cliente</h2><hr>
+  <div><span class="badge badge-info">id</span> -> {{cliente.id}}</div>
+  <div><span class="badge badge-info">Nombre</span> -. {{cliente.nombre}}</div>
+  <div><span class="badge badge-info">Edad</span> -> {{cliente.edad}}</div>
+  <div><span class="badge badge-info">Nacionalidad</span> -> {{cliente.nacionalidad}}</div>
+  <br>
+  <button class="btn btn-primary" (click)="enviar=false">Editar</button>
+</div>
