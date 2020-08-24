@@ -1,5 +1,5 @@
-export class Scrumm{
+export class Scrum{
   id : number
   name : string
-  player : string[]
+  players : string[]
 }
