@@ -3,4 +3,7 @@ export class Alumno {
   name : string = ''
   lastname : string = ''
   age : number = 0
+  dir : string = ''
+  tel : string = ''
+  email : string = ''
 }
