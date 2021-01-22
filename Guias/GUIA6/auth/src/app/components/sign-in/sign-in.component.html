@@ -1,0 +1,52 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="card rounded-0">
+            <div class="card-header">
+              <h3 class="mb-0">Sign-In</h3>
+              <a href="./dashboard">ir a dashboard</a>
+            </div>
+            <div class="display-table">
+              <div class="display-table-cell">
+                <div class="authBlok">
+                  <div class="form-group">
+                    <input type="text" name="userName" id="userName" class="form-control" placeholder="Nombre de Usuario" #userName required>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Contraseña" #userPass required>
+                  </div>
+                  <div class="forgotPassword">
+                    <span routerLink="/forgot-password">Olvide mi contraseña</span>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <input type="button" value="Ingresar" class="btn btn-success btn-lg float-right"
+                      (click)="authService.SignIn(userName.value,userPass.value)"
+                    >
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-lg float-right" (click)="authService.GoogleAuth()">
+                      <i class="fab fa-google-plus-g"></i>
+                      Entra con Google
+                    </button>
+                  </div>
+                  <br><br>
+                </div>
+                <br>
+                <div class="redirecToLogin">
+                  <span>
+                    ¿No tienes cuenta?
+                    <a class="redirect" href='/register-user'>Registrate</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

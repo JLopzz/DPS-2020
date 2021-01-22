@@ -1,0 +1,17 @@
+<div class="display-table">
+  <div class="display-table-cell">
+    <div class="auth-block">
+      <h3>Gracias por registrarse!</h3>
+      <div class="form-group">
+        <p class="text-center">te enviamos un correo de confirmacion a <strong>{{authService.userData.email}}</strong></p>
+        <p class="text-center">por favor revisa tu correo, y da click en el link, para verificar tu cuenta</p>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" (click)="authService.SendVerificationMail()">
+          <i class="fas fa-redo-alt"></i>
+          Reenviar correo de verificacion
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
